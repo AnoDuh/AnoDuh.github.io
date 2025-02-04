@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Grid Website</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style type="text/css">
+    body {
+        background-image: url("https://img.freepik.com/free-vector/colorful-design-science-education_23-2148484343.jpg?t=st=1738667742~exp=1738671342~hmac=db90b93cdb5ff34a70a6a6c27ea53d681cfd73fe3d9ddbb42a00e96ac5a026e3&w=1800");
+        background-position:top;
+        background-repeat: no-repeat;
+        background-size:auto;
+    }
+    #mask {
+        -webkit-mask-image: linear-gradient(180deg, #000 60%, rgba(0, 0, 0, 0.5) 100%);
+    }
+    </style>
+<body>
+        <div class="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-2-row2 gap-10" style="padding: 20px;">
+
+            <!-- Hoverable Item -->
+            <div class="bg-white p-4 rounded-lg shadow-lg transform transition duration-300 hover:scale-105">
+                <p class="text-center">Hourse Sound</p>
+                <div class="flex justify-center" style="padding: 10px;">
+                    <audio controls autoplay muted>
+                        <source src="https://www.w3schools.com/html/horse.ogg" type="audio/ogg">
+                    </audio>
+                </div>
+            </div>
+
+            <!-- Hoverable Subscribe Box -->
+            <div class="bg-orange-200 p-6 rounded-lg text-center shadow-lg transform transition duration-300 hover:scale-105">
+                <p>Subscribe to my</p>
+                <button class="bg-orange-500 text-white px-4 py-2 mt-2 rounded-md hover:bg-orange-600">Newsletter</button>
+                <div class="flex justify-center" style="padding: 10px;">
+                    <model-viewer alt="Neil Armstrong's Spacesuit from the Smithsonian Digitization Programs Office and National Air and Space Museum" src="https://sketchfab-prod-media.s3.amazonaws.com/archives/8a1ca8e3ca224cdeb9264674416bde38/glb/58739f5648cc4147af0e6183bfa7f635/small_and_large_intestine.glb?AWSAccessKeyId=ASIAZ4EAQ242IFAVADDU&Signature=JCb0d%2BUa%2B4t2sS30W7rYk1X5VP8%3D&x-amz-security-token=IQoJb3JpZ2luX2VjEBMaCWV1LXdlc3QtMSJIMEYCIQDEpYouxgKeYVMF1ZoFIJ2JN0ITAD21j68jZz2LoH0yHgIhALCnvv3aEWVYUE2s7Siw4ycl2Cmfg5OuZl5vwffVKsW0KrIFCCwQABoMNjc4ODc0MzcxODkyIgwQcWSQbag1mqMu7RoqjwVG7lcq0OcNUUjWzNOdqxQzN09h74LjQtuNkm21wUdLhXEz35CqvogF5GE8qKa24R1shcpKmwXi47Qe3NL8JQnX0JKBMutrbejspivXfksEJ%2BNj7XeipiQ9qlPd5sYwNXZ43qO7a%2Fw8chCBfp3v4fLc3PEideQir9RQqfRzV8kKzsL%2BYfxenW3NGXIjNyeJkHF28RwcvEMaE5cmfidtbu3RCWz4UfuAe0%2F2pZuXJR7H84vq3b0FXmXVxdbGFmprbsduLPXHWQ34%2Ba4n%2FxTm%2FoqweBUuOjsJM4kgSgZQcCT%2FQR6G9w3V%2BB%2FhijF16nBXRBZSXx1M5j16SFenVPP%2F7gpxlDLcmLOHg8vF8lVu0DBztaPX%2BG%2F7B5Td0XJlWsYMojHmNbymTESceVUZGyGytQVA6%2Fe4VvjAKGffaF7k80YGqZiEJW5RDjJaA7kC3TzlQiFajk%2BGIzf3vHQt8KOJ%2Bcb2Peu3dmemRYScVsHBu2TDZgRn%2FE5qVvrluj9CEOMRog2Rhx3coTUNBOgPWYcpFg0FMPoStVvVbRXiJr%2Brw8G2EDbvmwRRXOOJRTYrhW3n5JA%2F%2Bg4KeeWhf6DbN4btzNlHiN2tLVgCO4IhKL7eMWXXHZ0YPw9SKp7%2FxKQY%2ByBhTtvXb1NsPjSXOueWzPvFdSYE7tDDll2NlMsUj%2BlvmDUts8Z7U8WMPtXi5dekrjYbsWsqQHROdv%2BYgNveHakiNW%2FJYHDrqtXx05Xx7Bng1gYZx8Pzi4B7wJ7dmzjqmAWjOkBh41fRRjD3wR6buIp%2FKalZ393YxvKrzycSbN9z%2BDgIMuO3du6I4mDNrKceoRWsagPLWnniWfockp5KWNdVXMUqv35EL%2FDsmOEIXvMey7B2MIHrh70GOrABVH8ocrjAwwqTLdCYgY7GKXab3FLpGRTI3HElYpHQDyLQO5WFWD3MWcw4C2ua%2Fugep7PYYKPFfI28h%2BxGaOWvq3jU3TyJ%2FdMo0rBbVpgHymIwIDqVoeC5Z9BLQTGm4YZbt9FJ5kLC1LCpYW16Heg0ciPBEMVeIQ4wm6w6qXyt88IRr%2B736pGiA8psCBQiHWfZT8cpMXBJie1rrG%2BkAQTnGKVzSzKSXD4ib2efQvGmKgc%3D&Expires=1738672153" poster="ImageToStl.com_small_and_large_intestine.png" shadow-intensity="1" camera-controls touch-action="pan-y"></model-viewer>
+                </div>
+            </div>
+
+            <!-- Hoverable Pop-up Trigger -->
+            <div id="mask" class="bg-green-200 p-6 rounded-lg text-center shadow-lg transform transition duration-300 hover:scale-105">
+                <p>Click for a Pop-up</p>
+                <button onclick="openPopup()" class="bg-green-500 text-white px-4 py-2 mt-2 rounded-md hover:bg-green-600">Open</button>
+            </div>
+
+            <div id="mask" class="bg-blue-200 p-6 rounded-lg text-center shadow-lg transform transition duration-300 hover:scale-105">
+                <p>Click for a Pop-up</p>
+                <button onclick="openPopup()" class="bg-green-500 text-white px-4 py-2 mt-2 rounded-md hover:bg-green-600">Open</button>
+            </div>
+
+        </div>
+    
+        <!-- Pop-up Modal -->
+        <div id="popup" class="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center hidden">
+            <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                <p>This is a pop-up!</p>
+                <button onclick="closePopup()" class="bg-red-500 text-white px-4 py-2 mt-4 rounded-md hover:bg-red-600">Close</button>
+            </div>
+    <script src="script.js"></script>
+</body>
+</html>
