@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Animated GIF to Mapped PNG</title>
+  <style>
+    /* Optional: You can add CSS for transitions if desired */
+    #animatedImage {
+      transition: opacity 0.5s ease;
+    }
+  </style>
+</head>
+<body>
+  <!-- Initially load the animated GIF -->
+  <img
+    id="animatedImage"
+    src="ezgif-3a1dcb4b33984.gif"
+    alt="Animated GIF"
+    usemap="#imageMap">
+
+  <!-- Define the image map for the static PNG -->
+  <map name="imageMap">
+    <!-- Example clickable rectangular area -->
+    <area shape="rect" coords="34,44,270,350" href="http://example.com/link1" alt="Link 1">
+    <!-- Example clickable circular area -->
+    <area shape="circle" coords="500,200,50" href="http://example.com/link2" alt="Link 2">
+  </map>
+
+  <script>
+    // When the page loads, start a timer to swap the image source
+    window.addEventListener("load", function() {
+      // Adjust the timeout duration to match your GIF's animation length (in milliseconds)
+      setTimeout(function() {
+        // Optional: Fade out before swapping (if you want a smooth transition)
+        const imgElement = document.getElementById("animatedImage");
+        imgElement.style.opacity = 0;
+        setTimeout(function() {
+          // Swap the animated GIF for the static PNG
+          imgElement.src = "pxArt(0).png";
+          // Fade back in
+          imgElement.style.opacity = 1;
+        }, 100); // 500ms to match the CSS transition time
+      }, 1500); // 3000ms = 3 seconds; adjust as needed
+    });
+  </script>
+</body>
+</html>
