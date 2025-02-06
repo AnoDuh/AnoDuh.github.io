@@ -9,23 +9,46 @@
       transition: opacity 0.5s ease;
     }
   </style>
+  <style type="text/css">
+    body {
+        background-color: rgb(70, 22, 19);
+        background-position:top;
+        background-repeat: no-repeat;
+        background-size:auto;
+    }
+    img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        position: center;
+        zoom: normal;
+    }
+    @font-face { font-family: centurygoth; font-weight: bold; src: url('/assets/centurygothic_bold.ttf'); } 
+  </style>
 </head>
 <body>
-  <!-- Initially load the animated GIF -->
-  <img
-    id="animatedImage"
-    src="ezgif-3a1dcb4b33984.gif"
-    alt="Animated GIF"
-    usemap="#imageMap">
+  <header>
+    <a href=/index.html>
+      <img src="/poster_sunum_sablon (1).png" alt="Header Image" style="width: 100%; height: auto;">
+    </a>
+  </header></a>
+  <div style="border: 5px solid rgb(247, 203, 202); padding: 10px; border-radius: 30px;">
+    <h1 style="text-align: center; color: rgb(247, 203, 202); padding: 10px; font-family: centurygoth; font-size: xxx-large;">Doğru Yeri Bulun</h1>
+    <!-- Initially load the animated GIF -->
+    <img
+      id="animatedImage"
+      src="/assets/output-onlinegiftools.gif"
+      alt="Animated GIF"
+      usemap="#imageMap">
 
-  <!-- Define the image map for the static PNG -->
-  <map name="imageMap">
-    <!-- Example clickable rectangular area -->
-    <area shape="rect" coords="34,44,270,350" href="http://example.com/link1" alt="Link 1">
-    <!-- Example clickable circular area -->
-    <area shape="circle" coords="500,200,50" href="http://example.com/link2" alt="Link 2">
-  </map>
-
+    <!-- Define the image map for the static PNG -->
+    <map name="imageMap">
+      <!-- Example clickable rectangular area -->
+      <area shape="rect" coords="34,44,270,350" href="http://example.com/link1" alt="Link 1">
+      <!-- Example clickable circular area -->
+      <area shape="circle" coords="500,200,50" href="http://example.com/link2" alt="Link 2">
+    </map>
+    </div>
   <script>
     // When the page loads, start a timer to swap the image source
     window.addEventListener("load", function() {
@@ -36,7 +59,7 @@
         imgElement.style.opacity = 0;
         setTimeout(function() {
           // Swap the animated GIF for the static PNG
-          imgElement.src = "pxArt(0).png";
+          imgElement.src = "/assets/pxArt(0)_remove.png";
           // Fade back in
           imgElement.style.opacity = 1;
         }, 100); // 500ms to match the CSS transition time
