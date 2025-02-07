@@ -34,7 +34,12 @@ function closePopup(id) {
     }
 }
 
-document.addEventListener('touchstart', function () {
-    document.getElementsByTagName('audio')[0].play();
-    document.getElementsByTagName('audio')[0].pause();
-});
+const audioElement = document.querySelector('audio');
+if (audioElement) {
+    audioElement.addEventListener('touchstart', function () {
+        audioElement.play();
+        audioElement.pause();
+    });
+} else {
+    console.error('Audio element not found.');
+}
