@@ -16,11 +16,21 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-function openPopup(popupId) {
-    document.getElementById(popupId).classList.remove('hidden');
+function openPopup(id) {
+    const popup = document.getElementById(id);
+    if (popup) {
+        popup.classList.remove("hidden");
+    } else {
+        console.error(`Element with id ${id} not found.`);
+    }
 }
 
-function closePopup(popupId) {
-    document.getElementById(popupId).classList.add('hidden');
+function closePopup(id) {
+    const popup = document.getElementById(id);
+    if (popup) {
+        popup.classList.add("hidden");
+    } else {
+        console.error(`Element with id ${id} not found.`);
+    }
 }
 
