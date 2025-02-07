@@ -18,7 +18,15 @@
     #mask {
         -webkit-mask-image: linear-gradient(180deg, #000 60%, rgba(0, 0, 0, 0.5) 100%);
     }
+    .compact-text {
+        max-width: 700px;
+        margin: 0 auto;
+        line-height: 1.5;
+    }
+</style>
     </style>
+    
+    
 <body>
     <header>
         <img src="poster_sunum_sablon (1).png" alt="Header Image" style="width: 100%; height: auto;">
@@ -40,7 +48,7 @@
 
             <!-- Hoverable Subscribe Box -->
             <div class="bg-orange-200 p-6 rounded-lg text-center shadow-lg transform transition duration-300 hover:scale-105">
-                <p>Subscribe to my</p>
+                <p style="padding: 10px;">Subscribe to my</p>
                 <a href="other html files/ani.html" class="bg-orange-500 text-white px-4 py-2 mt-2 rounded-md hover:bg-orange-600">Newsletter</a>
                 <div class="flex justify-center" style="padding: 10px;">
                     <model-viewer alt="Neil Armstrong's Spacesuit from the Smithsonian Digitization Programs Office and National Air and Space Museum" src="small_and_large_intestine (1).glb" poster="https://raw.githubusercontent.com/AnoDuh/AnoDuh.github.io/refs/heads/main/ImageToStl.com_small_and_large_intestine.png" shadow-intensity="1" camera-controls touch-action="pan-y"></model-viewer>
@@ -48,23 +56,30 @@
             </div>
 
             <!-- Hoverable Pop-up Trigger -->
-            <div id="mask" class="bg-green-200 p-6 rounded-lg text-center shadow-lg transform transition duration-300 hover:scale-105">
+            <div id="mask1" class="bg-green-200 p-6 rounded-lg text-center shadow-lg transform transition duration-300 hover:scale-105">
                 <p>Click for a Pop-up</p>
-                <button onclick="openPopup()" class="bg-green-500 text-white px-4 py-2 mt-2 rounded-md hover:bg-green-600">Open</button>
+                <button onclick="openPopup('popup1')" class="bg-green-500 text-white px-4 py-2 mt-2 rounded-md hover:bg-green-600">Open</button>
             </div>
 
-            <div id="mask" class="bg-blue-200 p-6 rounded-lg text-center shadow-lg transform transition duration-300 hover:scale-105">
+            <div id="mask2" class="bg-blue-200 p-6 rounded-lg text-center shadow-lg transform transition duration-300 hover:scale-105">
                 <p>Click for a Pop-up</p>
-                <button onclick="openPopup()" class="bg-green-500 text-white px-4 py-2 mt-2 rounded-md hover:bg-green-600">Open</button>
+                <button onclick="openPopup('popup2')" class="bg-green-500 text-white px-4 py-2 mt-2 rounded-md hover:bg-green-600">Open</button>
             </div>
 
-        </div>
-    
-        <!-- Pop-up Modal -->
-        <div id="popup" class="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center hidden">
-            <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-                <p>This is a pop-up!</p>
-                <button onclick="closePopup()" class="bg-red-500 text-white px-4 py-2 mt-4 rounded-md hover:bg-red-600">Close</button>
+            <!-- Pop-up Modal 1 -->
+            <div id="popup1" class="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center hidden">
+                <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                    <p class="compact-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae assumenda voluptate laudantium itaque modi aspernatur nam vel, debitis obcaecati velit molestias repellat dicta, odit culpa provident est ipsum. Aliquid consectetur ipsum facilis laboriosam? Quos ullam quas, tenetur ab iusto eveniet laudantium incidunt officia, animi, totam nisi suscipit reiciendis! Tenetur, deleniti.</p>
+                    <button onclick="closePopup('popup1')" class="bg-red-500 text-white px-4 py-2 mt-4 rounded-md hover:bg-red-600">Close</button>
+                </div>
+            </div>
+
+            <!-- Pop-up Modal 2 -->
+            <div id="popup2" class="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center hidden">
+                <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                    <p class="compact-text">Different text for the second pop-up.</p>
+                    <button onclick="closePopup('popup2')" class="bg-red-500 text-white px-4 py-2 mt-4 rounded-md hover:bg-red-600">Close</button>
+                </div>
             </div>
     <script src="script.js"></script>
 </body>

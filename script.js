@@ -15,12 +15,12 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-// Pop-up Functions
-function openPopup() {
-    document.getElementById("popup").classList.remove("hidden");
+
+function openPopup(popupId) {
+    document.getElementById(popupId).classList.remove('hidden');
 }
 
-function closePopup() {
-    document.getElementById("popup").classList.add("hidden");
+function closePopup(popupId) {
+    document.getElementById(popupId).classList.add('hidden');
 }
 
