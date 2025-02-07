@@ -28,6 +28,11 @@ function openPopup(id) {
 function closePopup(id) {
     const popup = document.getElementById(id);
     if (popup) {
+        const audios = popup.querySelectorAll("audio");
+        audios.forEach(audio => {
+            audio.pause();
+            audio.currentTime = 0; // Reset playback to the beginning if desired.
+        });
         popup.classList.add("hidden");
     } else {
         console.error(`Element with id ${id} not found.`);
