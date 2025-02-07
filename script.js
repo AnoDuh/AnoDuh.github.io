@@ -33,13 +33,3 @@ function closePopup(id) {
         console.error(`Element with id ${id} not found.`);
     }
 }
-
-const audioElement = document.querySelector('audio');
-if (audioElement) {
-    audioElement.addEventListener('touchstart', function () {
-        audioElement.play();
-        audioElement.pause();
-    });
-} else {
-    console.error('Audio element not found.');
-}
