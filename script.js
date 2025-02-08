@@ -34,6 +34,11 @@ function closePopup(id) {
             audio.pause();
             audio.currentTime = 0; // Reset playback to the beginning if desired.
         });
+        const video = popup.querySelectorAll("video");
+        video.forEach(video => {
+            video.pause();
+            video.currentTime = 0; // Reset playback to the beginning if desired.
+        });
         popup.classList.add("hidden");
     } else {
         console.error(`Element with id ${id} not found.`);
