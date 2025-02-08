@@ -8,15 +8,24 @@
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" type="image/png" href="/assets/Screenshot 2025-02-07 at 14.25 Background Removed.44.png" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 <style type="text/css">
+    html, body {
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    }
     body {
-        background-color: rgb(70, 22, 19);
+        
+        background-image: linear-gradient(180deg, #660000 85%, rgba(3, 3, 3, 1) 115%);
         background-position:top;
         background-repeat: no-repeat;
         background-size:auto;
     }
-    #mask1, #mask2 {
+    #mask1, #mask2, #mask3 {
         mask-image: linear-gradient(180deg, #000 60%, rgba(0, 0, 0, 0.5) 100%);
     }
     .compact-text {
@@ -59,6 +68,11 @@
                 <button onclick="openPopup('popup1')" class="bg-green-500 text-white px-4 py-2 mt-2 rounded-md hover:bg-green-600">Open</button>
             </div>
 
+            <div id="mask3" class="bg-green-200 p-6 rounded-lg text-center shadow-lg transform transition duration-300 hover:scale-105">
+                <p style="font-weight: bold; font-size: x-large;">Galeri</p>
+                <button onclick="openPopup('popup3')" class="bg-green-500 text-white px-4 py-2 mt-2 rounded-md hover:bg-green-600">Open</button>
+            </div>
+
             <div id="mask2" class="bg-blue-200 p-6 rounded-lg text-center shadow-lg transform transition duration-300 hover:scale-105">
                 <p style="font-weight: bold; font-size: x-large;">Kaynakça</p>
                 <button onclick="openPopup('popup2')" class="bg-green-500 text-white px-4 py-2 mt-2 rounded-md hover:bg-green-600">Open</button>
@@ -93,6 +107,59 @@
                         <a href="https://www.nature.com/articles/s41590-018-0064-8">10. 	Huber-Lang M, Lambris JD, Ward PA. Innate immune responses to trauma. Nature Immunology 2018 19:4 [Internet] 2018 [cited 2025 Jan 24];19(4):327–41. Available from: https://www.nature.com/articles/s41590-018-0064-8<br /><br /></a>
                         <a href="https://pubmed.ncbi.nlm.nih.gov/26557036/">11. 	Binkowska AM, Michalak G, Slotwiński R. Current views on the mechanisms of immune responses to trauma and infection. Cent Eur J Immunol [Internet] 2015 [cited 2025 Jan 24];40(2):206–16. Available from: https://pubmed.ncbi.nlm.nih.gov/26557036/</p></a>
                     <button onclick="closePopup('popup2')" class="bg-red-500 text-white px-4 py-2 mt-4 rounded-md hover:bg-red-600">Close</button>
+                </div>
+            </div>
+
+            <div id="popup3" class="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center hidden">
+                <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                    <div class="flex justify-center" style="padding: 10px;">
+                        <div id="myCarousel" class="carousel slide custom-carousel" data-ride="carousel">
+                            <!-- Indicators -->
+                            <ol class="carousel-indicators">
+                              <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                              <li data-target="#myCarousel" data-slide-to="1"></li>
+                              <li data-target="#myCarousel" data-slide-to="2"></li>
+                            </ol>
+                          
+                            <!-- Wrapper for slides -->
+                            <div class="carousel-inner">
+                              <div class="item active">
+                                <img src="/ImageToStl.com_small_and_large_intestine.png" alt="Chania">
+                                <div class="carousel-caption">
+                                  <h3>Los Angeles</h3>
+                                  <p>LA is always so much fun!</p>
+                                </div>
+                              </div>
+                          
+                              <div class="item">
+                                <img src="/assets/hareketli_iskelet.gif" alt="Chicago">
+                                <div class="carousel-caption">
+                                  <h3>Chicago</h3>
+                                  <p>Thank you, Chicago!</p>
+                                </div>
+                              </div>
+                          
+                              <div class="item">
+                                <img src="/poster_sunum_sablon (1).png" alt="New York">
+                                <div class="carousel-caption">
+                                  <h3>New York</h3>
+                                  <p>We love the Big Apple!</p>
+                                </div>
+                              </div>
+                            </div>
+                          
+                            <!-- Left and right controls -->
+                            <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                              <span class="glyphicon glyphicon-chevron-left"></span>
+                              <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                              <span class="glyphicon glyphicon-chevron-right"></span>
+                              <span class="sr-only">Next</span>
+                            </a>
+                          </div>
+                    </div>
+                    <button onclick="closePopup('popup3')" class="bg-red-500 text-white px-4 py-2 mt-4 rounded-md hover:bg-red-600">Close</button>
                 </div>
             </div>
     <script src="script.js"></script>

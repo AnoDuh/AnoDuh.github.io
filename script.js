@@ -1,3 +1,4 @@
+
 // Scroll Animation
 document.addEventListener("DOMContentLoaded", function () {
     const elements = document.querySelectorAll(".fade-in");
