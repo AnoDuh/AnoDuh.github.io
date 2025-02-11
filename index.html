@@ -73,6 +73,10 @@
                 <p style="font-weight: bold; font-size: x-large;">Özet</p>
                 <button onclick="openPopup('popup1')" class="bg-green-500 text-white px-4 py-2 mt-2 rounded-md hover:bg-green-600">Aç</button>
             </div>
+            <div id="mask1" class="bg-cyan-200 p-6 rounded-lg text-center shadow-lg transform transition duration-300 hover:scale-105">
+                <p style="font-weight: bold; font-size: x-large;">Genetik Fırtına Nedir ?</p>
+                <button onclick="openPopup('popupG')" class="bg-green-500 text-white px-4 py-2 mt-2 rounded-md hover:bg-green-600">Aç</button>
+            </div>
 
             <div id="mask3" class="bg-yellow-100 p-6 rounded-lg text-center shadow-lg transform transition duration-300 hover:scale-105">
                 <p style="font-weight: bold; font-size: x-large;">Galeri</p>
@@ -112,6 +116,20 @@
                 </div>
             </div>
 
+            <div id="popupG" class="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center hidden">
+                <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                    <div class="flex justify-center" style="padding: 10px;">
+                        <audio controls>
+                            <source src="assets/gen_gon.mp3" type="audio/mp3">
+                        </audio>
+                    </div>
+                    <p class="compact-text">Künt travma sonrasında lökositlerin kendilerini düzenlemek amacıyla genetik ekspresyonlarını değiştirdiği bir fenomen olarak tanımlanır. Bu süreçte, lökositlerin genlerinin yaklaşık %80'inde bir değişim görülür. Yapılan aynı çalışma bize nicel bir veri daha sunuyor: Yaklaşık 5136 gen de travma sonrası iki kata yakın bir değişim gözlemlenir. Değişimin büyük bir kısmı, travmadan sonraki ilk 12 saat içinde gerçekleşir. Bu kadar fazla genin rol alması, travmanın derecesini belirlemek için tek veya birden fazla biyo-belirtecin yeterli olmadığını gösterir. Transkriptom seviyesinde görülen bu değişimler, gen ekspresyonunun nasıl farklılaştığını ortaya koyarken, yapılan genetik araştırmalar, bu tepkinin ardışık değil, eşzamanlı olarak gerçekleştiğini göstermektedir.</p>
+                    <a class="bg-blue-500 text-white px-4 py-2 mt-4 rounded-md hover:bg-blue-600 flex justify-center w-48 mx-auto" href="https://pubmed.ncbi.nlm.nih.gov/22110166/" target="_blank">Kaynak Linki</a>
+                    <button onclick="closePopup('popupG')" class="bg-red-500 text-white px-4 py-2 mt-4 rounded-md hover:bg-red-600">Kapat</button>
+                </div>
+            </div>
+
+
             <!-- Pop-up Modal 2 -->
             <div id="popup2" class="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center hidden">
                 <div class="bg-white p-6 rounded-lg shadow-lg text-left">
@@ -149,7 +167,7 @@
                                     <source src="https://raw.githubusercontent.com/AnoDuh/AnoDuh.github.io/refs/heads/main/assets/Exploratory%20Laparotomy%20and%20Splenectomy%20for%20Ruptured%20Spleen%20Following%20Blunt%20Force%20Trauma%201080.mp4" type="video/mp4">
                                   </video>
                                 <div class="carousel-caption">
-                                  <a href="https://www.youtube.com/watch?v=_XUFzY14YIA" style="color: blue;">YouTube linki</a>
+                                  <a href="https://www.youtube.com/watch?v=_XUFzY14YIA" style="color: blue;" target="_blank">YouTube linki</a>
                                 </div>
                               </div>
                           
