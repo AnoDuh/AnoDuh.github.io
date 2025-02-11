@@ -289,16 +289,19 @@
       const img = document.createElement('img');
       if (score === totalQuestions) {
         img.src = '/assets/solo_kar/bilgin.png';
-        img.alt = 'Excellent performance!';
+        img.alt = 'Bilgin';
       } else if (score === totalQuestions - 1) {
         img.src = '/assets/solo_kar/zeki.png';
-        img.alt = 'Good job!';
+        img.alt = 'Zeki';
       } else if (score === totalQuestions - 2) {
         img.src = '/assets/solo_kar/basarili.png';
-        img.alt = 'Good job!';
+        img.alt = 'Başarılı';
       } else if (score === totalQuestions - 3) {
         img.src = '/assets/solo_kar/tecrubesiz.png';
-        img.alt = 'Good job!';
+        img.alt = 'Tecrübesiz';
+      } else if (score === totalQuestions - 4) {
+        img.src = '/assets/solo_kar/normal.png';
+        img.alt = 'Normal';
       } else {
         img.src = "/assets/solo_kar/beyinsiz.png";
         img.alt = 'Better luck next time!';
