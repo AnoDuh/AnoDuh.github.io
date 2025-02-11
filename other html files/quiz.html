@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="shortcut icon" type="image/png" href="/assets/Screenshot 2025-02-07 at 14.25 Background Removed.44.png" />
+  <title>Oyun</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /*buranın rengini değiştir*/
+    .quiz-container {
+      max-width: 700px;
+      background: #ffffff;
+      padding: 20px;
+      margin: auto;
+      border-radius: 8px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    }
+    h2 {
+      text-align: center;
+    }
+    .question {
+      display: none;
+      margin-bottom: 20px;
+    }
+    .question.active {
+      display: block;
+    }
+    /* Container for the image and overlay boxes */
+    .img-container {
+      position: relative;
+      display: inline-block;
+    }
+    .img-container img {
+      display: block;
+    }
+    /* The overlay boxes */
+    .box {
+      position: absolute;
+      border: 2px solid #ffffff;
+      background-color: rgba(255, 255, 255, 0.3);
+      cursor: pointer;
+      transition: background-color 0.3s, border-color 0.3s;
+    }
+    /* When a box is selected, change its appearance */
+    .box.selected {
+      background-color: rgba(0, 150, 0, 0.5);
+      border-color: #000;
+    }
+    .navigation {
+      margin-top: 20px;
+      display: flex;
+      justify-content: space-between;
+    }
+    .navigation button {
+      padding: 10px 15px;
+      font-size: 16px;
+      cursor: pointer;
+      color: chocolate;
+    }
+    #result {
+      margin-top: 20px;
+      text-align: center;
+      font-size: 1.2em;
+    }
+    #result img {
+      max-width: 100%;
+      height: auto;
+      margin-top: 10px;
+      border-radius: 8px;
+    }
+  </style>
+  <style>
+    /* Optional: You can add CSS for transitions if desired */
+    #animatedImage {
+      transition: opacity 0.5s ease;
+    }
+  </style>
+  <style type="text/css">
+    html, body {
+      min-height: 100vh;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+        
+      background-image: linear-gradient(180deg, #660000 85%, rgba(3, 3, 3, 1) 115%);
+      background-color: #660000;
+      background-position:top;
+      background-repeat: no-repeat;
+      background-size:auto;
+    }
+
+    img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        position: center;
+        zoom: normal;
+    }
+    header {
+    margin-bottom: 20px;
+    }
+    .quiz-container {
+    margin-bottom: 50px;
+    }
+    @font-face { font-family: centurygoth; font-weight: bold; src: url('/assets/centurygothic_bold.ttf'); } 
+  </style>
+</head>
+<body>
+  <header>
+    <a href=/index.html>
+      <img src="/poster_sunum_sablon (3).png" alt="Header Image" style="width: 100%; height: auto;">
+    </a>
+  </header>
+  <div class="quiz-container">
+    <h2>Quiz with Overlay Boxes</h2>
+    <form id="quiz-form">
+      <!-- Question 1 -->
+      <div class="question active" data-correct="a">
+        <h3>1. Which box corresponds to the correct answer?</h3>
+        <div class="img-container">
+          <!-- Replace with your actual image -->
+          <img
+          id="animatedImage"
+          src="/assets/output-onlinegiftools.gif"
+          alt="Animated GIF"
+          usemap="#imageMap"
+          >
+          <!-- Overlay boxes for question 1 -->
+          <div class="box" style="border-color: #414141; left: 50px; top: 50px; width: 80px; height: 80px;" onclick="selectOption('q1', 'a', this)"></div>
+          <div class="box" style="border-color: #414141; left: 200px; top: 50px; width: 80px; height: 80px;" onclick="selectOption('q1', 'b', this)"></div>
+          <div class="box" style="border-color: #414141; left: 350px; top: 50px; width: 80px; height: 80px;" onclick="selectOption('q1', 'c', this)"></div>
+        </div>
+        <!-- Hidden input to store the answer -->
+        <input type="hidden" name="q1" value="">
+      </div>
+
+      <!-- Question 2 -->
+      <div class="question" data-correct="b">
+        <h3>2. Choose the correct area on the image:</h3>
+        <div class="img-container">
+          <img src="/assets/pxArt(0)_remove.png" alt="Question 2 Image">
+          <!-- Overlay boxes for question 2 -->
+          <div class="box" style="border-color: #414141; left: 60px; top: 80px; width: 80px; height: 80px;" onclick="selectOption('q2', 'a', this)"></div>
+          <div class="box" style="border-color: #414141; left: 180px; top: 80px; width: 80px; height: 80px;" onclick="selectOption('q2', 'b', this)"></div>
+          <div class="box" style="border-color: #414141; left: 300px; top: 80px; width: 80px; height: 80px;" onclick="selectOption('q2', 'c', this)"></div>
+        </div>
+        <input type="hidden" name="q2" value="">
+      </div>
+
+      <!-- Question 3 -->
+      <div class="question" data-correct="b">
+        <h3>3. Choose the correct area on the image:</h3>
+        <div class="img-container">
+          <img src="/assets/pxArt(0)_remove.png" alt="Question 2 Image">
+          <!-- Overlay boxes for question 2 -->
+          <div class="box" style="border-color: #414141; left: 60px; top: 80px; width: 80px; height: 80px;" onclick="selectOption('q3', 'a', this)"></div>
+          <div class="box" style="border-color: #414141; left: 180px; top: 80px; width: 80px; height: 80px;" onclick="selectOption('q3', 'b', this)"></div>
+          <div class="box" style="border-color: #414141; left: 300px; top: 80px; width: 80px; height: 80px;" onclick="selectOption('q3', 'c', this)"></div>
+        </div>
+        <input type="hidden" name="q3" value="">
+      </div>
+      <!-- Question 4 -->
+      <div class="question" data-correct="b">
+        <h3>4. Choose the correct area on the image:</h3>
+        <div class="img-container">
+          <img src="/assets/pxArt(0)_remove.png" alt="Question 2 Image">
+          <!-- Overlay boxes for question 2 -->
+          <div class="box" style="border-color: #414141; left: 60px; top: 80px; width: 80px; height: 80px;" onclick="selectOption('q4', 'a', this)"></div>
+          <div class="box" style="border-color: #414141; left: 180px; top: 80px; width: 80px; height: 80px;" onclick="selectOption('q4', 'b', this)"></div>
+          <div class="box" style="border-color: #414141; left: 300px; top: 80px; width: 80px; height: 80px;" onclick="selectOption('q4', 'c', this)"></div>
+        </div>
+        <input type="hidden" name="q4" value="">
+      </div>
+
+      <!-- Question 5 -->
+      <div class="question" data-correct="b">
+        <h3>5. Choose the correct area on the image:</h3>
+        <div class="img-container">
+          <img src="/assets/pxArt(0)_remove.png" alt="Question 2 Image">
+          <!-- Overlay boxes for question 2 -->
+          <div class="box" style="border-color: #414141; left: 60px; top: 80px; width: 80px; height: 80px;" onclick="selectOption('q5', 'a', this)"></div>
+          <div class="box" style="border-color: #414141; left: 180px; top: 80px; width: 80px; height: 80px;" onclick="selectOption('q5', 'b', this)"></div>
+          <div class="box" style="border-color: #414141; left: 300px; top: 80px; width: 80px; height: 80px;" onclick="selectOption('q5', 'c', this)"></div>
+        </div>
+        <input type="hidden" name="q5" value="">
+      </div>
+
+      <!-- Navigation Buttons -->
+      <div class="navigation">
+        <button type="button" id="prevBtn" onclick="prevQuestion()">Previous</button>
+        <button type="button" id="nextBtn" onclick="nextQuestion()">Next</button>
+        <button type="button" id="submitBtn" onclick="submitQuiz()">Submit Quiz</button>
+      </div>
+    </form>
+    <div id="result"></div>
+  </div>
+
+  <script>
+    // Quiz state
+    let currentQuestionIndex = 0;
+    const questions = document.querySelectorAll('.question');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    const submitBtn = document.getElementById('submitBtn');
+    const resultDiv = document.getElementById('result');
+
+    // Show the question based on index
+    function showQuestion(index) {
+      questions.forEach((q, i) => {
+        q.classList.toggle('active', i === index);
+      });
+      updateNavigation();
+    }
+
+    // Update navigation button visibility
+    function updateNavigation() {
+      prevBtn.style.display = currentQuestionIndex === 0 ? 'none' : 'inline-block';
+      if (currentQuestionIndex === questions.length - 1) {
+        nextBtn.style.display = 'none';
+        submitBtn.style.display = 'inline-block';
+      } else {
+        nextBtn.style.display = 'inline-block';
+        submitBtn.style.display = 'none';
+      }
+    }
+
+    function nextQuestion() {
+      if (currentQuestionIndex < questions.length - 1) {
+        currentQuestionIndex++;
+        showQuestion(currentQuestionIndex);
+      }
+    }
+
+    function prevQuestion() {
+      if (currentQuestionIndex > 0) {
+        currentQuestionIndex--;
+        showQuestion(currentQuestionIndex);
+      }
+    }
+
+    // Record the answer when a box is clicked
+    function selectOption(questionName, value, boxElement) {
+      console.log("Box clicked for", questionName, "with value", value);
+      document.querySelector('input[name="' + questionName + '"]').value = value;
+      console.log("Hidden input new value:", document.querySelector('input[name="' + questionName + '"]').value);
+      
+      // Clear any displayed results
+      resultDiv.innerHTML = '';
+      
+      // Remove "selected" styling from all boxes within the same container
+      const container = boxElement.parentElement;
+      const boxes = container.querySelectorAll('.box');
+      boxes.forEach(box => box.classList.remove('selected'));
+      
+      // Add "selected" styling to the clicked box
+      boxElement.classList.add('selected');
+    }
+
+    // Calculate and display the quiz score
+    function submitQuiz() {
+      let score = 0;
+      const totalQuestions = questions.length;
+      const quizForm = document.getElementById('quiz-form');
+      resultDiv.innerHTML = ''; // Clear previous results
+
+      // Loop through each question and compare answers
+      questions.forEach((question, index) => {
+        const correctAnswer = question.getAttribute('data-correct');
+        const questionName = 'q' + (index + 1);
+        const userAnswer = quizForm.elements[questionName].value;
+        console.log(`For ${questionName}: correct=${correctAnswer}, user selected=${userAnswer}`);
+        if (userAnswer === correctAnswer) {
+          score++;
+        }
+      });
+
+      // Display the score message
+      const message = document.createElement('p');
+      message.innerText = 'Puanınız: ' + score + '/' + totalQuestions;
+      resultDiv.appendChild(message);
+
+      // Display an image corresponding to the score
+      const img = document.createElement('img');
+      if (score === totalQuestions) {
+        img.src = '/assets/solo_kar/bilgin.png';
+        img.alt = 'Excellent performance!';
+      } else if (score === totalQuestions - 1) {
+        img.src = '/assets/solo_kar/zeki.png';
+        img.alt = 'Good job!';
+      } else if (score === totalQuestions - 2) {
+        img.src = '/assets/solo_kar/basarili.png';
+        img.alt = 'Good job!';
+      } else if (score === totalQuestions - 3) {
+        img.src = '/assets/solo_kar/tecrubesiz.png';
+        img.alt = 'Good job!';
+      } else {
+        img.src = "/assets/solo_kar/beyinsiz.png";
+        img.alt = 'Better luck next time!';
+      }
+      resultDiv.appendChild(img);
+    }
+
+    
+    showQuestion(currentQuestionIndex);
+  </script>
+  <script>
+    
+    window.addEventListener("load", function() {
+
+      setTimeout(function() {
+
+        const imgElement = document.getElementById("animatedImage");
+        imgElement.style.opacity = 0;
+        setTimeout(function() {
+
+          imgElement.src = "/assets/pxArt(0)_remove.png";
+
+          imgElement.style.opacity = 1;
+        }, 100); 
+      }, 1500); 
+    });
+  </script>
+
+  <footer class="bg-black bg-opacity-15 flex justify-between items-center py-2 w-full">
+    <!-- Left side: Text -->
+    <p class="text-white pl-8">
+      Duhan Özdemir &copy; 2025
+    </p>
+  
+    <!-- Right side: Grouped logos -->
+    <div class="flex items-center pr-8 space-x-8">
+      <a href="https://github.com/AnoDuh" target="_blank">
+        <img src="/assets/github_logo.png" alt="GitHub Logo" class="h-14 w-auto">
+      </a>
+      <a href="mailto:duhan-ozdemir@outlook.com" target="_blank">
+        <img src="/assets/mail_logo.webp" alt="Outlook Logo" class="h-14 w-auto">
+      </a>
+    </div>
+  </footer>
+
+</body>
+</html>
