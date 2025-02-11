@@ -54,7 +54,7 @@
 
             <!-- Hoverable Item -->
             <div class="bg-white p-4 rounded-lg shadow-lg transform transition duration-300 hover:scale-105">
-                <p class="text-center" style="font-weight: bold;">3D Görüntüleyici</p>
+                <button onclick="openPopup('popupX')" class="bg-green-500 text-white px-4 py-2 mt-2 rounded-md hover:bg-green-600">3B Görüntüleyiciyi Aç</button>
                 <div class="flex justify-center" style="padding: 10px;">
                     <model-viewer src="yeni_Gİ(V2).glb" poster="poster_gi.png" ar ar-scale="0.5" camera-controls touch-action="pan-y" alt="intes_ar" shadow-intensity="2" max-camera-orbit="auto 90deg auto" ios-src="yeni_Gİ_2.usdz" xr-environment></model-viewer>
                 </div>
@@ -82,6 +82,21 @@
             <div id="mask2" class="bg-green-200 p-6 rounded-lg text-center shadow-lg transform transition duration-300 hover:scale-105">
                 <p style="font-weight: bold; font-size: x-large;">Kaynakça</p>
                 <button onclick="openPopup('popup2')" class="bg-green-500 text-white px-4 py-2 mt-2 rounded-md hover:bg-green-600">Aç</button>
+            </div>
+            <div id="popupX" class="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center hidden">
+                <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                    <div class="flex justify-center" style="padding: 10px;">
+                        <model-viewer src="yeni_Gİ(V2).glb" poster="poster_gi.png" ar ar-scale="0.5" camera-controls touch-action="pan-y" alt="intes_ar" shadow-intensity="2" max-camera-orbit="auto 90deg auto" ios-src="yeni_Gİ_2.usdz" xr-environment></model-viewer>
+                    </div>
+                    <div class="flex justify-center" style="padding: 10px;">
+                        <model-viewer src="/assets/3d models/liver.glb" poster="/assets/liverpng.png" ar ar-scale="0.5" camera-controls touch-action="pan-y" alt="intes_ar" shadow-intensity="2" max-camera-orbit="auto 90deg auto" ios-src="/assets/3d models/liver.usdz" xr-environment></model-viewer>
+                    </div>
+                    <div class="flex justify-center" style="padding: 10px;">
+                        <model-viewer src="/assets/3d models/micro_int.glb" poster="/assets/micro_intPNG.png" ar ar-scale="0.5" camera-controls touch-action="pan-y" alt="intes_ar" shadow-intensity="2" max-camera-orbit="auto 90deg auto" ios-src="/assets/3d models/micro_int.usdz" xr-environment></model-viewer>
+                    </div>
+                    <p class="compact-text"></p>
+                    <button onclick="closePopup('popupX')" class="bg-red-500 text-white px-4 py-2 mt-4 rounded-md hover:bg-red-600">Kapat</button>
+                </div>
             </div>
 
             <!-- Pop-up Modal 1 -->
