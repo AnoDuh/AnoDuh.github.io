@@ -1,5 +1,5 @@
 
-// Scroll Animation
+// Scroll
 document.addEventListener("DOMContentLoaded", function () {
     const elements = document.querySelectorAll(".fade-in");
     const observer = new IntersectionObserver(entries => {
@@ -32,12 +32,12 @@ function closePopup(id) {
         const audios = popup.querySelectorAll("audio");
         audios.forEach(audio => {
             audio.pause();
-            audio.currentTime = 0; // Reset playback to the beginning if desired.
+            audio.currentTime = 0; // Reset playback.
         });
         const video = popup.querySelectorAll("video");
         video.forEach(video => {
             video.pause();
-            video.currentTime = 0; // Reset playback to the beginning if desired.
+            video.currentTime = 0; // Reset playback
         });
         popup.classList.add("hidden");
     } else {

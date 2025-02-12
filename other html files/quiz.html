@@ -25,7 +25,7 @@
     .question.active {
       display: block;
     }
-    /* Container for the image and overlay boxes */
+
     .img-container {
       position: relative;
       display: inline-block;
@@ -33,7 +33,7 @@
     .img-container img {
       display: block;
     }
-    /* The overlay boxes */
+    /* The overlay kutu */
     .box {
       position: absolute;
       border: 2px solid #ffffff;
@@ -70,7 +70,7 @@
     }
   </style>
   <style>
-    /* Optional: You can add CSS for transitions if desired */
+
     #animatedImage {
       transition: opacity 0.5s ease;
     }
@@ -120,32 +120,32 @@
   </header>
   <div class="quiz-container">
     <form id="quiz-form">
-      <!-- Question 1 -->
+      <!-- Soru 1 -->
       <div class="question active" data-correct="b">
         <h3 class="text-center" style="font-family: centurygoth; font-size: xx-large;">1. Treitz ligamenti nerede ?</h3>
         <div class="img-container">
-          <!-- Replace with your actual image -->
+          <!-- img -->
           <img
           id="animatedImage"
           src="/assets/output-onlinegiftools.gif"
           alt="Animated GIF"
           usemap="#imageMap"
           >
-          <!-- Overlay boxes for question 1 -->
+          <!-- Overlay kutu for soru 1 -->
           <div class="box" style="border-color: #414141; left: 220px; top: 400px; width: 80px; height: 80px;" onclick="selectOption('q1', 'a', this)"></div>
           <div class="box" style="border-color: #414141; left: 260px; top: 300px; width: 80px; height: 80px;" onclick="selectOption('q1', 'b', this)"></div>
           <div class="box" style="border-color: #414141; left: 310px; top: 400px; width: 80px; height: 80px;" onclick="selectOption('q1', 'c', this)"></div>
         </div>
-        <!-- Hidden input to store the answer -->
+        <!-- Hidden cevap -->
         <input type="hidden" name="q1" value="">
       </div>
 
-      <!-- Question 2 -->
+      <!-- soru 2 -->
       <div class="question" data-correct="b">
         <h3 class="text-center" style="font-family: centurygoth; font-size: xx-large;">2. Batındaki travmalardan en fazla etkilenen organ hangisidir ?</h3>
         <div class="img-container">
           <img src="/assets/pxArt(0)_remove.png" alt="Question 2 Image">
-          <!-- Overlay boxes for question 2 -->
+          <!-- kutu for soru 2 -->
           <div class="box" style="border-color: #414141; left: 280px; top: 240px; width: 70px; height: 70px;" onclick="selectOption('q2', 'a', this)"></div>
           <div class="box" style="border-color: #414141; left: 230px; top: 310px; width: 100px; height: 75px;" onclick="selectOption('q2', 'b', this)"></div>
           <div class="box" style="border-color: #414141; left: 270px; top: 420px; width: 80px; height: 80px;" onclick="selectOption('q2', 'c', this)"></div>
@@ -153,24 +153,24 @@
         <input type="hidden" name="q2" value="">
       </div>
 
-      <!-- Question 3 -->
+      <!-- soru 3 -->
       <div class="question" data-correct="b">
         <h3 class="text-center" style="font-family: centurygoth; font-size: xx-large;">3. Çemişgezek Devlet Hastanesine halı saha maçından gelen bir hastanın hangi organı en fazla etkilenmiş olabilir ?</h3>
         <div class="img-container">
           <img src="/assets/pxArt(0)_remove.png" alt="Question 2 Image">
-          <!-- Overlay boxes for question 2 -->
+          <!-- Overlay kutu for soru 2 -->
           <div class="box" style="border-color: #414141; left: 230px; top: 310px; width: 100px; height: 75px;" onclick="selectOption('q3', 'a', this)"></div>
           <div class="box" style="border-color: #414141; left: 330px; top: 330px; width: 60px; height: 60px;" onclick="selectOption('q3', 'b', this)"></div>
           <div class="box" style="border-color: #414141; left: 280px; top: 240px; width: 70px; height: 70px;" onclick="selectOption('q3', 'c', this)"></div>
         </div>
         <input type="hidden" name="q3" value="">
       </div>
-      <!-- Question 4 -->
+      <!-- soru 4 -->
       <div class="question" data-correct="b">
         <h3 class="text-center" style="font-family: centurygoth; font-size: xx-large;">4. Cullen bulgusunu nerede görüyoruz ?</h3>
         <div class="img-container">
           <img src="/assets/pxArt(0)_remove.png" alt="Question 2 Image">
-          <!-- Overlay boxes for question 2 -->
+          <!--  kutu for soru 2 -->
           <div class="box" style="border-color: #414141; left: 280px; top: 240px; width: 70px; height: 70px;" onclick="selectOption('q4', 'a', this)"></div>
           <div class="box" style="border-color: #414141; left: 285px; top: 380px; width: 50px; height: 50px;" onclick="selectOption('q4', 'b', this)"></div>
           <div class="box" style="border-color: #414141; left: 285px; top: 450px; width: 50px; height: 50px;" onclick="selectOption('q4', 'c', this)"></div>
@@ -178,12 +178,12 @@
         <input type="hidden" name="q4" value="">
       </div>
 
-      <!-- Question 5 -->
+      <!-- soru 5 -->
       <div class="question" data-correct="b">
         <h3 class="text-center" style="font-family: centurygoth; font-size: xx-large;">5. Grey Turner bulgusunu nerede görüyoruz ?</h3>
         <div class="img-container">
           <img src="/assets/pxArt(0)_remove.png" alt="Question 2 Image">
-          <!-- Overlay boxes for question 2 -->
+          <!--  kutu for soru 2 -->
           <div class="box" style="border-color: #414141; left: 280px; top: 240px; width: 70px; height: 70px;" onclick="selectOption('q5', 'a', this)"></div>
           <div class="box" style="border-color: #414141; left: 240px; top: 350px; width: 30px; height: 80px;" onclick="selectOption('q5', 'b', this)"></div>
           <div class="box" style="border-color: #414141; left: 285px; top: 450px; width: 50px; height: 50px;" onclick="selectOption('q5', 'c', this)"></div>
@@ -191,7 +191,7 @@
         <input type="hidden" name="q5" value="">
       </div>
 
-      <!-- Navigation Buttons -->
+      <!-- Navigation butonlar -->
       <div class="navigation">
         <button type="button" id="prevBtn" onclick="prevQuestion()">Önceki</button>
         <button type="button" id="nextBtn" onclick="nextQuestion()">Sonraki</button>
@@ -202,7 +202,7 @@
   </div>
 
   <script>
-    // Quiz state
+    // Test Js
     let currentQuestionIndex = 0;
     const questions = document.querySelectorAll('.question');
     const prevBtn = document.getElementById('prevBtn');
@@ -210,7 +210,7 @@
     const submitBtn = document.getElementById('submitBtn');
     const resultDiv = document.getElementById('result');
 
-    // Show the question based on index
+
     function showQuestion(index) {
       questions.forEach((q, i) => {
         q.classList.toggle('active', i === index);
@@ -218,7 +218,7 @@
       updateNavigation();
     }
 
-    // Update navigation button visibility
+    // Güncel navigation button visibility
     function updateNavigation() {
       prevBtn.style.display = currentQuestionIndex === 0 ? 'none' : 'inline-block';
       if (currentQuestionIndex === questions.length - 1) {
@@ -244,32 +244,32 @@
       }
     }
 
-    // Record the answer when a box is clicked
+
     function selectOption(questionName, value, boxElement) {
       console.log("Box clicked for", questionName, "with value", value);
       document.querySelector('input[name="' + questionName + '"]').value = value;
       console.log("Hidden input new value:", document.querySelector('input[name="' + questionName + '"]').value);
       
-      // Clear any displayed results
+      // Sil any displayed results
       resultDiv.innerHTML = '';
       
-      // Remove "selected" styling from all boxes within the same container
+      // Sil "selected"
       const container = boxElement.parentElement;
       const boxes = container.querySelectorAll('.box');
       boxes.forEach(box => box.classList.remove('selected'));
       
-      // Add "selected" styling to the clicked box
+      // Ekle "selected"
       boxElement.classList.add('selected');
     }
 
-    // Calculate and display the quiz score
+    // Hesapla and display the quiz score
     function submitQuiz() {
       let score = 0;
       const totalQuestions = questions.length;
       const quizForm = document.getElementById('quiz-form');
       resultDiv.innerHTML = ''; // Clear previous results
 
-      // Loop through each question and compare answers
+      // Loop each soru and karşılaştır cevap
       questions.forEach((question, index) => {
         const correctAnswer = question.getAttribute('data-correct');
         const questionName = 'q' + (index + 1);
@@ -280,12 +280,12 @@
         }
       });
 
-      // Display the score message
+      // Display the skor mesaj
       const message = document.createElement('p');
       message.innerText = 'Puanınız: ' + score + '/' + totalQuestions;
       resultDiv.appendChild(message);
 
-      // Display an image corresponding to the score
+      // Display an resim  to the skor
       const img = document.createElement('img');
       if (score === totalQuestions) {
         img.src = '/assets/solo_kar/bilgin.png';
@@ -331,12 +331,12 @@
   </script>
 
   <footer class="bg-black bg-opacity-15 flex justify-between items-center py-2 w-full">
-    <!-- Left side: Text -->
+    <!-- Sol taraf: Text -->
     <p class="text-white pl-8">
       Duhan Özdemir &copy; 2025
     </p>
   
-    <!-- Right side: Grouped logos -->
+    <!-- Sağ taraf: Grouped logos -->
     <div class="flex items-center pr-8 space-x-8">
       <a href="https://github.com/AnoDuh" target="_blank">
         <img src="/assets/github_logo.png" alt="GitHub Logo" class="h-14 w-auto">
